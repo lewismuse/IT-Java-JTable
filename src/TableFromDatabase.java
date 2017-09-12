@@ -26,7 +26,7 @@ public class TableFromDatabase extends JFrame {
         	    // Added disable SSL link
         		String dbURL = "jdbc:mysql://localhost:3306/mysqltest1?autoReconnect=true&useSSL=false";
 			String username = "root";
-			String password = "uark.edu";
+			String password = "";
 
             Connection connection = DriverManager.getConnection( dbURL, username, password );
 
