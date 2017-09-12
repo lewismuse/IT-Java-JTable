@@ -24,7 +24,7 @@ hs_err_pid*
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-.idea/*
+
 .idea/**/tasks.xml
 .idea/dictionaries
 
@@ -39,7 +39,7 @@ hs_err_pid*
 
 # Gradle:
 .idea/**/gradle.xml
-.idea/**/libraries
+
 
 # CMake
 cmake-build-debug/
@@ -53,7 +53,7 @@ cmake-build-debug/
 ## Plugin-specific files:
 
 # IntelliJ
-out/*
+
 out
 
 # mpeltonen/sbt-idea plugin
@@ -71,4 +71,5 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 .idea/
+
 /bin/

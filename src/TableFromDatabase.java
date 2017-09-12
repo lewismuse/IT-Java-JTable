@@ -23,16 +23,16 @@ public class TableFromDatabase extends JFrame {
         {
           
         		//  Change username and password per user
-        	
-        		String dbURL = "jdbc:mysql://localhost:3306/mysqltest1";
+        	    // adding disable SSL link
+        		String dbURL = "jdbc:mysql://localhost:3306/mysqltest1?autoReconnect=true&useSSL=false";
 			String username = "root";
-			String password = "??????????";
+			String password = "????";
 
             Connection connection = DriverManager.getConnection( dbURL, username, password );
 
             //  Read data from a table
 
-            String sql = "Select * from employee";
+            String sql = "Select * from Employee";
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery( sql );
             ResultSetMetaData md = rs.getMetaData();
