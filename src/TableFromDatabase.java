@@ -24,15 +24,17 @@ public class TableFromDatabase extends JFrame {
           
         		//  Change username and password per user
         	    // adding disable SSL link
-        		String dbURL = "jdbc:mysql://localhost:3306/mysqltest1?autoReconnect=true&useSSL=false";
+
+        	String dbURL = "jdbc:mysql://localhost:3306/mysqltest1?autoReconnect=true&useSSL=false";
 			String username = "root";
 			String password = "????";
 
             Connection connection = DriverManager.getConnection( dbURL, username, password );
 
             //  Read data from a table
-
+        	
             String sql = "Select * from Employee";
+            //Statement stmt = DatabaseConnection.getConnection().createStatement();
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery( sql );
             ResultSetMetaData md = rs.getMetaData();
@@ -61,6 +63,7 @@ public class TableFromDatabase extends JFrame {
 
             rs.close();
             stmt.close();
+            //DatabaseConnection.getConnection().close();
             connection.close();
         }
         catch(Exception e)
