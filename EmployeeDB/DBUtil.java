@@ -15,7 +15,7 @@ public class DBUtil {
 					// set the db url, username, and password
 					String url = "jdbc:mysql://localhost:3306/mysqltest1";
 					String username = "root";
-					String password = "Garrison29";
+					String password = "????";
 					
 					// get and return connection
 					connection = DriverManager.getConnection(url, username, password);
