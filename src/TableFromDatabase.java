@@ -16,17 +16,17 @@ public class TableFromDatabase extends JFrame {
 
     public TableFromDatabase() {
     
-        Vector<Object> columnNames = new Vector<Object>();
-        Vector<Object> data = new Vector<Object>();
+        Vector<Object> columnNames = new Vector<>();
+        Vector<Object> data = new Vector<>();
 
         try
         {
           
         		//  Change username and password per user
-        	    // adding disable SSL link
+        	    // Added disable SSL link
         		String dbURL = "jdbc:mysql://localhost:3306/mysqltest1?autoReconnect=true&useSSL=false";
 			String username = "root";
-			String password = "????";
+			String password = "uark.edu";
 
             Connection connection = DriverManager.getConnection( dbURL, username, password );
 
@@ -49,7 +49,7 @@ public class TableFromDatabase extends JFrame {
 
             while (rs.next())
             {
-                Vector<Object> row = new Vector<Object>(columns);
+                Vector<Object> row = new Vector<>(columns);
 
                 for (int i = 1; i <= columns; i++)
                 {
@@ -102,7 +102,7 @@ public class TableFromDatabase extends JFrame {
     public static void main(String[] args) {
     
         TableFromDatabase frame = new TableFromDatabase();
-        frame.setDefaultCloseOperation( EXIT_ON_CLOSE );
+        frame.setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }
